@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/vaihtovirta/coub_api.svg?branch=master)](https://travis-ci.org/vaihtovirta/coub_api)
 
-API wrapper for [Coub](coub.com)
+API wrapper for [Coub](http://coub.com)
 
 Powered by [Her](https://github.com/remiprev/her) — ORM for REST API.
 
