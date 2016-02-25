@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 require 'her'
 require 'coub_api/middleware/parser'
+require 'coub_api/concerns/common_scopes'
 
 module CoubApi
   module Configuration
