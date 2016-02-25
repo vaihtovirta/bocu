@@ -13,18 +13,8 @@ Currently under development, so it supports only several public API methods.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'coub_api'
+gem 'coub_api', github: 'https://github.com/vaihtovirta/coub_api.git'
 ```
-
-And then execute:
-
-```
-$ bundle
-```
-
-Or install it yourself as:
-
-    $ gem install coub_api
 
 ## Usage
 
