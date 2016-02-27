@@ -31,7 +31,9 @@ coubs = coubs.order_by(:likes_count).page(5).per(25).fetch
 
 coubs.first.attributes
 # => returns Big Coub JSON, most part is omitted
-# => {"flag"=>nil, "abuses"=>nil, "recoubs_by_users_channels"=>nil, "recoub"=>nil, "like"=>nil, "in_my_best2015"=>false, "type"=>"Coub::Simple", "permalink"=>"5kirj"...
+# => {"flag"=>nil, "abuses"=>nil, "recoubs_by_users_channels"=>nil, 
+# "recoub"=>nil, "like"=>nil, "in_my_best2015"=>false, 
+# "type"=>"Coub::Simple", "permalink"=>"5kirj"...
 ```
 
 ##### Timeline:
