@@ -44,7 +44,7 @@ coubs.first.attributes
 require 'coub_api'
 
 CoubApi::Coub.by_tag('games').fetch # coubs by tag
-CoubApi::Coub.hot('games').fetch # timeline of the Hot section
+CoubApi::Coub.hot.fetch # timeline of the Hot section
 
 # timeline of the Explore section categories
 CoubApi::Coub.random.fetch
