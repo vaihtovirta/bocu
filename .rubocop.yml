@@ -21,6 +21,12 @@ Metrics/LineLength:
 Style/SymbolArray:
   Enabled: true
 
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/RedundantFreeze:
+  Enabled: false
+
 Metrics/AbcSize:
   Exclude:
     - 'test/**/*'
