@@ -1,8 +1,9 @@
-require 'coub_api/version'
 require 'coub_api/configuration'
+require 'coub_api/version'
 
 module CoubApi
-  extend CoubApi::Configuration
+  SEARCH_ENDPOINT = 'search'.freeze
+  TIMELINE_ENDPOINT = 'timeline'.freeze
 
-  setup!
+  extend CoubApi::Configuration
 end

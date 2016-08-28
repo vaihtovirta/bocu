@@ -3,14 +3,12 @@ module CoubApi
     class Explore
       include CommonScopes, Her::Model
 
-      CATEGORIES = %i(random newest coub_of_the_day).freeze
+      CATEGORIES = %i(coub_of_the_day newest random).freeze
 
-      collection_path "#{CoubApi::Configuration::TIMELINE_ENDPOINT}/explore/:category_id"
+      collection_path "#{CoubApi::TIMELINE_ENDPOINT}/explore/:category_id"
       parse_root_in_json :coubs, format: :active_model_serializers
 
-      CATEGORIES.each do |category|
-        scope category, -> { where(category_id: category) }
-      end
+      CATEGORIES.each { |category| scope category, -> { where(category_id: category) } }
     end
   end
 end
