@@ -1,4 +1,5 @@
 # CoubApi
+![](https://lh6.ggpht.com/FEPLCErGsrB4ErBdbtKaZfDq6df3Od2-g0kA8soEi3TdiuSYAhqSn4I87IYs1blzpd0=w300)
 
 [![Build Status](https://travis-ci.org/vaihtovirta/coub_api.svg?branch=master)](https://travis-ci.org/vaihtovirta/coub_api)
 
@@ -31,8 +32,8 @@ coubs = coubs.order_by(:likes_count).page(5).per(25).fetch
 
 coubs.first.attributes
 # => returns Big Coub JSON, most part is omitted
-# => {"flag"=>nil, "abuses"=>nil, "recoubs_by_users_channels"=>nil, 
-# "recoub"=>nil, "like"=>nil, "in_my_best2015"=>false, 
+# => {"flag"=>nil, "abuses"=>nil, "recoubs_by_users_channels"=>nil,
+# "recoub"=>nil, "like"=>nil, "in_my_best2015"=>false,
 # "type"=>"Coub::Simple", "permalink"=>"5kirj"...
 ```
 

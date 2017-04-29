@@ -15,6 +15,7 @@ module CoubApi
         CoubApi::Timelines::Hot.all
       end
 
+      # definition of coub_of_the_day, newest, random methods
       CoubApi::Timelines::Explore::CATEGORIES.each do |category|
         define_method category do
           Timelines::Explore.send(category)
