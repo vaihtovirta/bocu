@@ -1,9 +1,10 @@
 module CoubApi
   module Timelines
     class Explore
-      include CommonScopes, Her::Model
+      include Her::Model
+      include CommonScopes
 
-      CATEGORIES = %i(coub_of_the_day newest random).freeze
+      CATEGORIES = %i[coub_of_the_day newest random].freeze
 
       collection_path "#{CoubApi::TIMELINE_ENDPOINT}/explore/:category_id"
       parse_root_in_json :coubs, format: :active_model_serializers

@@ -1,6 +1,7 @@
 module CoubApi
   class Coub
-    include CommonScopes, Her::Model
+    include Her::Model
+    include CommonScopes
 
     class << self
       def search(query)

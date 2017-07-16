@@ -30,3 +30,6 @@ Style/RedundantFreeze:
 Metrics/AbcSize:
   Exclude:
     - 'test/**/*'
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false

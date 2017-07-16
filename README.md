@@ -21,7 +21,7 @@ gem 'coub_api', github: 'https://github.com/vaihtovirta/coub_api.git'
 
 You can check official Coub API docs [here](http://coub.com/dev/docs/Coub+API/Overview).
 
-##### Basic usage:
+##### Search by query:
 
 ```ruby
 require 'coub_api'
@@ -35,6 +35,19 @@ coubs.first.attributes
 # => {"flag"=>nil, "abuses"=>nil, "recoubs_by_users_channels"=>nil,
 # "recoub"=>nil, "like"=>nil, "in_my_best2015"=>false,
 # "type"=>"Coub::Simple", "permalink"=>"5kirj"...
+```
+
+##### Search by id:
+
+```ruby
+require 'coub_api'
+
+coub = CoubApi::Coub.find('70x8c')
+# => returns Big Coub JSON, most part is omitted
+# => #<CoubApi::Coub(coubs/12553778) flag=nil abuses=nil recoubs_by_users_channels=nil recoub=nil like=nil
+# in_my_best2015=false type="Coub::Simple" permalink="70x8c" title="House Every Weekend"
+# visibility_type="public" original_visibility_type="public" channel_id=1162114
+# created_at="2015-06-26T04:24:28Z" updated_at="2017-07-10T03:56:43Z" ...
 ```
 
 ##### Timeline:

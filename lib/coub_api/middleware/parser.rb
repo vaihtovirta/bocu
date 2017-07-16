@@ -1,7 +1,7 @@
 module CoubApi
   module Middleware
     class Parser < Faraday::Response::Middleware
-      DATA_KEYS = %i(coubs channels).freeze
+      DATA_KEYS = %i[coubs channels].freeze
 
       def on_complete(env)
         env[:body] = parse(env[:body])
