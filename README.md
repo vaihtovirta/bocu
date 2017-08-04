@@ -14,7 +14,7 @@ Currently under development, so it supports only several public API methods.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'bocu', github: 'https://github.com/vaihtovirta/bocu.git'
+gem 'bocu'
 ```
 
 ## Usage
