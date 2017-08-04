@@ -4,7 +4,7 @@ SimpleCov.start do
 end
 
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
-require 'coub_api'
+require 'bocu'
 require 'minitest/autorun'
 require 'webmock/minitest'
 require 'vcr'

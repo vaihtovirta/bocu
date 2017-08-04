@@ -1,7 +1,7 @@
-# CoubApi
+# Bocu
 ![](https://lh6.ggpht.com/FEPLCErGsrB4ErBdbtKaZfDq6df3Od2-g0kA8soEi3TdiuSYAhqSn4I87IYs1blzpd0=w300)
 
-[![Build Status](https://travis-ci.org/vaihtovirta/coub_api.svg?branch=master)](https://travis-ci.org/vaihtovirta/coub_api)
+[![Build Status](https://travis-ci.org/vaihtovirta/bocu.svg?branch=master)](https://travis-ci.org/vaihtovirta/bocu)
 
 API wrapper for [Coub](http://coub.com)
 
@@ -14,7 +14,7 @@ Currently under development, so it supports only several public API methods.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'coub_api', github: 'https://github.com/vaihtovirta/coub_api.git'
+gem 'bocu', github: 'https://github.com/vaihtovirta/bocu.git'
 ```
 
 ## Usage
@@ -24,9 +24,9 @@ You can check official Coub API docs [here](http://coub.com/dev/docs/Coub+API/Ov
 ##### Search by query:
 
 ```ruby
-require 'coub_api'
+require 'bocu'
 
-coubs = CoubApi::Coub.search('optimism')
+coubs = Bocu::Coub.search('optimism')
 coubs = coubs.order_by(:likes_count).page(5).per(25).fetch
 # returns array of coubs, wrapped with Her::Model
 
@@ -40,11 +40,11 @@ coubs.first.attributes
 ##### Search by id:
 
 ```ruby
-require 'coub_api'
+require 'bocu'
 
-coub = CoubApi::Coub.find('70x8c')
+coub = Bocu::Coub.find('70x8c')
 # => returns Big Coub JSON, most part is omitted
-# => #<CoubApi::Coub(coubs/12553778) flag=nil abuses=nil recoubs_by_users_channels=nil recoub=nil like=nil
+# => #<Bocu::Coub(coubs/12553778) flag=nil abuses=nil recoubs_by_users_channels=nil recoub=nil like=nil
 # in_my_best2015=false type="Coub::Simple" permalink="70x8c" title="House Every Weekend"
 # visibility_type="public" original_visibility_type="public" channel_id=1162114
 # created_at="2015-06-26T04:24:28Z" updated_at="2017-07-10T03:56:43Z" ...
@@ -55,23 +55,23 @@ coub = CoubApi::Coub.find('70x8c')
 [Related docs](https://coub.com/dev/docs/Coub+API/Timelines)
 
 ```ruby
-require 'coub_api'
+require 'bocu'
 
-CoubApi::Coub.by_tag('games').fetch # coubs by tag
-CoubApi::Coub.hot.fetch # timeline of the Hot section
+Bocu::Coub.by_tag('games').fetch # coubs by tag
+Bocu::Coub.hot.fetch # timeline of the Hot section
 
 # timeline of the Explore section categories
-CoubApi::Coub.random.fetch
-CoubApi::Coub.newest.fetch
-CoubApi::Coub.coub_of_the_day.fetch
+Bocu::Coub.random.fetch
+Bocu::Coub.newest.fetch
+Bocu::Coub.coub_of_the_day.fetch
 ```
 
 ##### Using chainable scopes for pagination and ordering:
 
 ```ruby
-require 'coub_api'
+require 'bocu'
 
-coubs = CoubApi::Coub.search('drive')
+coubs = Bocu::Coub.search('drive')
 coubs = coubs.order_by(:views_count).per_page(5).page(2)
 
 result = coubs.fetch # Returns array of 5 hot coubs starting from page 2
@@ -94,7 +94,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/vaihtovirta/coub_api.
+Bug reports and pull requests are welcome on GitHub at https://github.com/vaihtovirta/bocu.
 
 
 ## License
