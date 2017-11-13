@@ -1,5 +1,3 @@
-# coding: utf-8
-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'bocu/version'
@@ -8,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.name          = 'bocu'
   spec.version       = Bocu::VERSION
   spec.authors       = ['Emil Shakirov']
-  spec.email         = ['5o.smoker@gmail.com']
+  spec.email         = ['me@emil.sh']
 
   spec.summary       = 'Ruby wrapper for coub.com API'
   spec.description   = 'Ruby wrapper for coub.com API'
@@ -37,5 +35,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'webmock', '~> 3'
   spec.add_development_dependency 'simplecov', '~> 0.10'
 
-  spec.add_runtime_dependency 'her', '~> 0.9'
+  spec.add_dependency 'her', '~> 0.10.0'
 end
