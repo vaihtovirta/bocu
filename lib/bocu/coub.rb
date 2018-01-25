@@ -19,7 +19,7 @@ module Bocu
       # definition of coub_of_the_day, newest, random methods
       Bocu::Timelines::Explore::CATEGORIES.each do |category|
         define_method category do
-          Timelines::Explore.send(category)
+          Timelines::Explore.public_send(category)
         end
       end
     end

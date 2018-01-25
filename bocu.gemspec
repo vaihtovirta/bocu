@@ -27,13 +27,13 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_development_dependency 'bundler', '~> 1.14'
-  spec.add_development_dependency 'minitest-vcr', '~> 1.4'
   spec.add_development_dependency 'minitest', '~> 5.10'
+  spec.add_development_dependency 'minitest-vcr', '~> 1.4'
   spec.add_development_dependency 'pry', '~> 0.10'
   spec.add_development_dependency 'rake', '~> 12'
+  spec.add_development_dependency 'simplecov', '~> 0.10'
   spec.add_development_dependency 'vcr', '~> 3'
   spec.add_development_dependency 'webmock', '~> 3'
-  spec.add_development_dependency 'simplecov', '~> 0.10'
 
   spec.add_dependency 'her', '~> 0.10.0'
 end
