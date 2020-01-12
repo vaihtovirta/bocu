@@ -4,15 +4,12 @@ AllCops:
     - '.bundle/**/*'
     - 'bin/**/*'
     - 'config/**/*'
-    - 'db/**/*'
     - 'lib/tasks/**/*'
-    - 'vendor/assets/**/**/*'
-    - 'spec/factories/**/*'
 
-Documentation:
+Style/Documentation:
   Enabled: false
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 110
 
 Style/SymbolArray:
